@@ -1,0 +1,6 @@
+#node js gitignore
+
+.env
+node_modules
+
+#there should be more in the frontend folder (automatically created by 'create-react-app' so idk)
