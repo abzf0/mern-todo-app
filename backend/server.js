@@ -8,6 +8,8 @@ import cors from 'cors';            //lets react connect safely (and other websi
 import mongoose from 'mongoose';    //talks to mongodb
 import dotenv from 'dotenv';        //env. variables
 
+import initdb from mongodb.js;      //import connect function from other js file
+
 //setup
 dotenv.config();    //load env. vars
 const app = express();  //create express app
@@ -17,9 +19,9 @@ app.use(cors());    //let reacts make requests
 app.use(express.json());     //let app use json
 
 //connect to database
-mongoose.connect(process.env.MONGO_URL).then(() => console.log("mongodb connected")).catch(err => console.log(err));  //connect to mongoDB. check for error
+initdb();
 
-//define schema for tasks
+//define schema
 const taskSchema = new mongoose.Schema({
     title: String,
     desc: String,
