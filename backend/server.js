@@ -8,7 +8,7 @@ import cors from 'cors';            //lets react connect safely (and other websi
 import mongoose from 'mongoose';    //talks to mongodb
 import dotenv from 'dotenv';        //env. variables
 
-import initdb from mongodb.js;      //import connect function from other js file
+import initdb from './mongodb.js';  //import connect function from other js file
 
 //setup
 dotenv.config();    //load env. vars
