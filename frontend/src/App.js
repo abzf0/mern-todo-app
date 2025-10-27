@@ -14,7 +14,7 @@ function App() {
 
   const addTask = async () => {
     if (!newTask.title || !newTask.desc || !newTask.dueDate) {
-      alert("All fields must be filled!");
+      alert("all fields must be filled");
       return;
     }
 
@@ -68,7 +68,7 @@ function App() {
               <h2>{task.title}</h2>
               <p>{task.desc}</p>
               <p>Due: {new Date(task.dueDate).toLocaleDateString()}</p>
-              <p>Status: {task.completed ? "Completed" : "Pending"}</p>
+              <p>Status: {task.completed ? "completed" : "pending"}</p>
             </li>
           ))}
         </ul>
